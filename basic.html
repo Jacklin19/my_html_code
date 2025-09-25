@@ -46,7 +46,11 @@
             list-style-position: outside;
         }
 
-        li {
+        ul { 
+            border: 1px solid black;
+        }
+
+        .inout{
             border: 1px solid black;
         }
 
@@ -244,14 +248,14 @@
     <p>The list-style-position property specifies the position of the list markers in a list. The position of the list markers can be either inside or outside of a list item.</p>
     <p>list-style-position: inside</p>
         <ul class="inside-list">
-            <li>Item 1</li>
-            <li>Item 2</li>
+            <li class="inout">Item 1</li>
+            <li class="inout">Item 2</li>
         </ul>
 
     <p>list-style-position: outside</p>
         <ul class="outside-list">
-            <li>Item 1</li>
-            <li>Item 2</li>
+            <li class="inout">Item 1</li>
+            <li class="inout">Item 2</li>
         </ul>
 
     <h3>csc list-style-image property</h3>
@@ -408,10 +412,40 @@
         </tr>
     </table>
 <hr>
+<!--semantic html-->
+    <h2 style="color:rgb(16, 93, 218)"><U>SEMANTIC HTML:</U></h2>
+    <P>HTML tags can be categorized into two types based on semantics in HTML. <br>
+        They are:Semantic Tag and Non-semantic Tag<br>Semantic HTML elements clearly define the purpose and meaning of code.</P>
+    
+    <h3>semantic tags</h3>
+    <p>The tags which accurately describe their purpose and describe the type of their content are called semantic tags.</p>
+    <p> For example, < h1 > Header < h1 >From this code, we can accurately tell that the content inside the < h1 > tag is a heading.</p> 
+    <p>Some examples of semantic tags are 一 < h1 >-< h6 >, < form >, < table >, < main >, < p >, < header >, < footer >, < nav >, < article >, < aside >, < section >, < details >,< summary >, etc. </p>
+    <p>We use semantic HTML because the semantic HTML makes:</p>
+    <ul>
+        <li>makes the code easier to read</li>
+        <li>makes the site more accessible</li>
+        <li>leads to better SEO</li>
+    </ul>
 
-
-
-
+    <h3>non-semantic tags</h3>
+    <p>HTML non-semantic tags do not have a specific meaning or purpose. They are used to create general-purpose containers for content without providing any additional meaning or context.</p>
+    <p>For example, < span >welcome </ span > From this code, we cannot extract the meaning of the text. This code could come from any section of the document thus it adds no semantic value to the document.</p>
+    <p>Some examples of non-semantic tags are 一 < div >, < span >, etc</p>
+    
+    <header>
+        <h1>Heading</h1>
+    </header>
+    <section>
+        <main>
+            <article>
+                This is the main content of the website.
+            </article>
+        </main>
+        <aside>Extra information.</aside>
+    </section>
+    <footer>Copyright 2022</footer>
+<hr>    
 
 
 
