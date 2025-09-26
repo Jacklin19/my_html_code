@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>html_document_1</title>
     <style>
+        body{
+            background-color: linen;
+        }
+
         ul.disc {
             list-style-type: disc;
         }
@@ -60,7 +64,14 @@
 
         hr{
             border:2px solid blue;
-        }    
+        }  
+        
+        form{
+            background-color: pink;
+            border:2px solid blue;
+            padding:10px;
+            width:50%;
+        }
 
 
     </style>
@@ -75,10 +86,12 @@
     <p>body->describes content of the document</p> 
     <p>comment tags->this tag is used to insert comments inside document code</p> 
 <hr>
+
     <!--head section-->
     <h2 style="color:rgb(16, 93, 218)"><U>HEAD SECTION:</U></h2>
     <P>html head tag is a type of container which has the following tags called title, meta, link and style</P>
 <hr>
+
     <!--heading tags-->
     <h2 style="color:rgb(16, 93, 218)"><U>HEADING TAGS:</U></h2>
     <h1>1.basic tags</h1>
@@ -88,10 +101,12 @@
     <h5>5.formatting tags</h5>
     <h6>6.list tags</h6>
 <hr>
+
     <!--paragraph tag-->
     <h2 style="color:rgb(16, 93, 218)"><U>PARAGRAPH TAG:</U></h2>
     <P>The "< p >" tag in HTML is used to define a paragraph. It is one of the most commonly used tags for organizing and displaying text content on a webpage. </p>
 <hr>
+
     <h2 style="color:rgb(16, 93, 218)"><U>FORMATTING TAGS:</U></h2>
     <p>HTML provides a variety of tags to format text and give it special meaning or appearance. Here's a concise list of commonly used formatting tags:</p>
     <ul>
@@ -107,6 +122,7 @@
         <li><p>The HTML < sub > element defines subscript text. Subscript text appears half a character below the normal line, and is sometimes rendered in a smaller font. Subscript text can be used for chemical formulas, like H<sub>2</sub>O.</p></li>
     </ul>
 <hr> 
+
     <!--hyperlink-->       
     <h2 style="color:rgb(16, 93, 218)"><U>LINK TAGS:</U></h2>
     <p>The HTML < link > tag defines the relationship between the current document and an external resource, often for stylesheets or favicons. It's an empty element with attributes like href and rel. The < link > tag also supports the Global Attributes and  Event Attributes in HTML.</p>
@@ -116,10 +132,13 @@
     <br>
     <link rel="stylesheet" type="text/css" href="styles.css" hreflang="en-us">
 <hr>
+
     <h2 style="color:rgb(16, 93, 218)"><U>STYLE ATTRIBUTES:</U></h2>
     <P>The style attribute is used to specify the styling of an HTML element. We have various properties we can specify in an element using the style attribute. Let's discuss them in detail using examples for each property. </P>
     <p>syntax: < tagname <!--style="property:value; property:value;"--> > content < / tagname > </p>
 <hr>
+
+    <!--image tags-->
    <h2 style="color:rgb(16, 93, 218)"><U>IMAGE TAG:</U></h2> 
     <p>The HTML < img > tag is used to embed images in a web page. Images are not technically inserted into a web page; instead, they are linked to web pages. The < img > tag creates a holding space for the referenced image.</p>
     <P>The < img > tag is an empty tag, meaning it contains attributes only and does not have a closing tag. The basic syntax is:</P>
@@ -142,6 +161,8 @@
     <h3>IMAGE LINK</h3>
     <a href="https://youtube.com"><img src="picture.jpg" /></a>
 <hr>
+
+    <!--list tags-->
     <h2 style="color:rgb(16, 93, 218)"><U>LIST TAGS:</U></h2>
     <P>We can use three types of lists to represent different types of data in HTML: Unordered List < ul >, Ordered List < ol > Description List < dl ></P>
     <br>
@@ -275,6 +296,8 @@
         </ul>
 
 <hr>
+
+    <!--table tags-->
     <h2 style="color:rgb(16, 93, 218)"><U>TABLE TAGS:</U></h2>
     <P>HTML tables are used to organize and display data in rows and columns. Below is a breakdown of the key tags used to create and structure tables:</P>
       <ul>
@@ -416,6 +439,7 @@
         </tr>
     </table>
 <hr>
+
 <!--semantic html-->
     <h2 style="color:rgb(16, 93, 218)"><U>SEMANTIC HTML:</U></h2>
     <P>HTML tags can be categorized into two types based on semantics in HTML. <br>
@@ -451,11 +475,62 @@
     <footer>Copyright 2025</footer>
 <hr>    
 
-
-
-
-
-
+<!--block level and inline elements-->
+<h2 style="color:rgb(16, 93, 218)"><U>TWO MAIN HTML  DISPLAY BEHAVIOR:</U></h2>
+<P>HTML elements are categorized into two main types based on their default display behavior: block-level and inline elements.</P>
+<h3>Block-Level Elements:</h3>
+<ul>
+    <li>Block-level elements always start on a new line.</li>
+    <li>They typically occupy the full available width of their parent container.</li>
+    <li>They create a "block" in the document flow, pushing subsequent content to a new line.</li>
+    <li>They can contain both inline and other block-level elements.</li>
+    <li>Examples include < div >, < p >, < h1 > to < h6 >, < ul >, < li >, < header >, < footer >, < section >, < article >.</li>
+</UL>
+<br>
+<h3>Inline Elements:</h3>
+<ul>
+    <li>Inline elements do not start on a new line.</li>
+    <li>They only occupy as much width as necessary for their content. </li>
+    <li>They flow within the existing line of content, alongside other inline elements or text.</li>
+    <li>They can generally only contain other inline elements or plain text.</li> 
+    <li>Examples include < span >, < a >, < strong >, < em >, < img >, < input >, < label >.</li>
+</ul>
+<hr>
+<!--form tags-->
+    <h2 style="color:rgb(16, 93, 218)"><U>FORM TAGS:</U></h2>
+    <P>The < form > tag is used to create an HTML form for user input.</P>
+    <P>ACTION Specifies where to send the form-data when form is submitted. the form data is sent to a file on the server when the user clicks on the submit button.</P>
+    <p>METHOD Specifies the HTTP method to use when sending form-data. The form-data can be sent as URL variables (with method="get") or as HTTP post transaction (with method="post"). The default HTTP method when submitting form data is GET. </p>
+    <p>The < input type="text" > defines a single-line input field for text input.</p>
+    <p>The form itself is not visible. Also note that the default width of an input field is 20 characters.</p>
+    <p>The < label > element is useful for screen-reader users, because the screen-reader will read out loud the label when the user focuses on the input element.</p>
+    <p>The < label > element also helps users who have difficulty clicking on very small regions (such as radio buttons or checkboxes) - because when the user clicks the text within the < label > element, it toggles the radio button/checkbox.</p>
+    <p>The for attribute of the < label > tag should be equal to the id attribute of the < input > element to bind them together.</p>
+    <p>The < input type="radio" > defines a radio button. Radio buttons let a user select ONE of a limited number of choices.</p>
+    <p>The < input type="checkbox" > defines a checkbox. Checkboxes let a user select ZERO or MORE options of a limited number of choices.</p>
+    <p>The < input type="submit" > defines a button for submitting the form data to a form-handler.</p>
+    <p>The form-handler is typically a file on the server with a script for processing input data. The form-handler is specified in the form's action attribute.</p>
+    <p>Notice that each input field must have a name attribute to be submitted. If the name attribute is omitted, the value of the input field will not be sent at all.</p>
+    <P>Always use POST if the form data contains sensitive or personal information!</P>
+    <form action="/action_page.php" method="get">
+        <label for="fname">First name:</label>
+        <input type="text" id="fname" name="fname" value="John"><br><br>
+        <label for="lname">Last name:</label>
+        <input type="text" id="lname" name="lname" value="Doe"><br><br>
+        <input type="radio" id="html" name="fav_language" value="HTML">
+        <label for="html">HTML</label><br>
+        <input type="radio" id="css" name="fav_language" value="CSS">
+        <label for="css">CSS</label><br>
+        <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+        <label for="javascript">JavaScript</label>
+        <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+        <label for="vehicle1"> I have a bike</label><br>
+        <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+        <label for="vehicle2"> I have a car</label><br>
+        <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+        <label for="vehicle3"> I have a boat</label>
+        <input type="submit" value="Submit">
+    </form>
 
 </body>
 
