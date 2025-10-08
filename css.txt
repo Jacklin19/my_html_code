@@ -1,3 +1,7 @@
 cascading style sheets
+<<<<<<< HEAD
 CSS stands for Cascading Style Sheets
 
+=======
+CSS controls how web pages look and feel, defining elements
+>>>>>>> 99b8a4dcb913fc66406f80fe2400b59e85f96762
