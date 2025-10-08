@@ -1,1 +1,2 @@
 cascading style sheets
+CSS controls how web pages look and feel, defining elements
