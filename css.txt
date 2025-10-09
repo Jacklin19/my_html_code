@@ -1,2 +1,3 @@
 cascading style sheets
 CSS stands for Cascading Style Sheets.
+There are three different ways to add CSS styles to an HTML document.
