@@ -14,6 +14,7 @@ class coding{
 
 - bullets1
 - bullets2
+...
 
 1. number
 2. number
