@@ -493,38 +493,73 @@ s        form{
 <hr>
 <!--form tags-->
     <h2 style="color:rgb(16, 93, 218)"><U>FORM TAGS:</U></h2>
-    <P>The < form > tag is used to create an HTML form for user input.</P>
-    <P>ACTION Specifies where to send the form-data when form is submitted. the form data is sent to a file on the server when the user clicks on the submit button.</P>
-    <p>METHOD Specifies the HTTP method to use when sending form-data. The form-data can be sent as URL variables (with method="get") or as HTTP post transaction (with method="post"). The default HTTP method when submitting form data is GET. </p>
-    <p>The < input type="text" > defines a single-line input field for text input.</p>
-    <p>The form itself is not visible. Also note that the default width of an input field is 20 characters.</p>
-    <p>The < label > element is useful for screen-reader users, because the screen-reader will read out loud the label when the user focuses on the input element.</p>
-    <p>The < label > element also helps users who have difficulty clicking on very small regions (such as radio buttons or checkboxes) - because when the user clicks the text within the < label > element, it toggles the radio button/checkbox.</p>
-    <p>The for attribute of the < label > tag should be equal to the id attribute of the < input > element to bind them together.</p>
-    <p>The < input type="radio" > defines a radio button. Radio buttons let a user select ONE of a limited number of choices.</p>
-    <p>The < input type="checkbox" > defines a checkbox. Checkboxes let a user select ZERO or MORE options of a limited number of choices.</p>
-    <p>The < input type="submit" > defines a button for submitting the form data to a form-handler.</p>
-    <p>The form-handler is typically a file on the server with a script for processing input data. The form-handler is specified in the form's action attribute.</p>
-    <p>Notice that each input field must have a name attribute to be submitted. If the name attribute is omitted, the value of the input field will not be sent at all.</p>
-    <P>Always use POST if the form data contains sensitive or personal information!</P>
-    <form action="/action_page.php" method="get">
+    <ul>
+    <li>The < form > tag is used to create an HTML form for user input.</li>
+    <li>ACTION Specifies where to send the form-data when form is submitted. the form data is sent to a file on the server when the user clicks on the submit button.</li>
+    <li>METHOD Specifies the HTTP method to use when sending form-data. The form-data can be sent as URL variables (with method="get") or as HTTP post transaction (with method="post"). The default HTTP method when submitting form data is GET. </li>
+    <li>The < input type="text" > defines a single-line input field for text input.</li>
+    <li>The form itself is not visible. Also note that the default width of an input field is 20 characters.</li>
+    <li>The < label > element is useful for screen-reader users, because the screen-reader will read out loud the label when the user focuses on the input element.</li>
+    <li>The < label > element also helps users who have difficulty clicking on very small regions (such as radio buttons or checkboxes) - because when the user clicks the text within the < label > element, it toggles the radio button/checkbox.</li>
+    <li>The for attribute of the < label > tag should be equal to the id attribute of the < input > element to bind them together.</li>
+    <li>The < input type="radio" > defines a radio button. Radio buttons let a user select ONE of a limited number of choices.</li>
+    <li>The < input type="checkbox" > defines a checkbox. Checkboxes let a user select ZERO or MORE options of a limited number of choices.</li>
+    <li>The < input type="submit" > defines a button for submitting the form data to a form-handler.</li>
+    <li>The form-handler is typically a file on the server with a script for processing input data. The form-handler is specified in the form's action attribute.</li>
+    <li>Notice that each input field must have a name attribute to be submitted. If the name attribute is omitted, the value of the input field will not be sent at all.</li>
+    <li>Always use POST if the form data contains sensitive or personal information!</li>
+    
+    <p>common form elements are input, button, select, textarea, label, fieldset, legend, datalist, output etc.</p>
+    </ul>
+    <form action="/action_page.php" method="get/post">
+        <input type="image"><br><br>
         <label for="fname">First name:</label>
         <input type="text" id="fname" name="fname" value="John"><br><br>
+
         <label for="lname">Last name:</label>
-        <input type="text" id="lname" name="lname" value="Doe"><br><br>
-        <input type="radio" id="html" name="fav_language" value="HTML">
-        <label for="html">HTML</label><br>
-        <input type="radio" id="css" name="fav_language" value="CSS">
-        <label for="css">CSS</label><br>
-        <input type="radio" id="javascript" name="fav_language" value="JavaScript">
-        <label for="javascript">JavaScript</label>
+        <input type="text" id="lname" name="lname" placeholder="last name" required><br><br>
+
+        <label for="date of birth">Dob:</label>
+        <input type="date"><br><br>
+
+        <label for="email">Enter your email: </label>
+        <input type="email" name="email" autocomplete="email" id="email" required /><br><br>
+
+        <label>select any one job:</label><br>
+        <input type="radio" id="software developer" name="fav_job" value="software developer">
+        <label for="software developer">Software developer</label><br>
+        <input type="radio" id="hr" name="fav_job" value="Hr">
+        <label for="hr">Hr</label><br>
+        <input type="radio" id="admin" name="fav_job" value="Admin">
+        <label for="admin">Admin</label><br><br>
+
+        <label>what you have?</label><br>
         <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
         <label for="vehicle1"> I have a bike</label><br>
         <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
         <label for="vehicle2"> I have a car</label><br>
         <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
-        <label for="vehicle3"> I have a boat</label>
+        <label for="vehicle3"> I have a boat</label><br><br>
+
+        <label>select your state:</label>
+        <select>
+            <option>chennai</option>
+            <option>madurai</option>
+            <option>thiruchi</option>
+            <option>theni</option>
+        </select><br><br>
+
+        <label for="resume">upload your resume:</label>
+        <input type="file"><br><br>
+
+        <fieldset>
+        <legend>Do you agree to the terms?</legend>
+        <label><input type="radio" name="radio" value="yes" /> Yes</label>
+        <label><input type="radio" name="radio" value="no" /> No</label>
+        </fieldset><br><br>
+        
         <input type="submit" value="CLICK HERE TO SUBMIT">
+        <br><br><br><br>
     </form>
 
 </body>

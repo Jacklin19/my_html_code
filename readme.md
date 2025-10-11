@@ -10,11 +10,11 @@ class coding{
         echo "hello world";
     }
 }
-...
+```
 
 - bullets1
 - bullets2
-...
+```
 
 1. number
 2. number
