@@ -61,17 +61,21 @@
         .imagestyle {
             list-style-image: url("https://openclipart.org/image/20px/183195");
         }
-s        form{
+        form{
             background-color: pink;
-            border:2px solid blue;
-            padding:10px;
-            width:50%;
+            border:2px solid red;
+            padding:15px;
+            width:40%;
+            margin:auto;
         }
 
 
     </style>
 </head>
 <body>
+    <div style="width:100%; height:300px; background-color:pink;">
+        <img src="https://th.bing.com/th/id/OIP.JC-H_3MXAxMwjhGUm69blQHaD4?w=345&h=180&c=7&r=0&o=7&cb=12&pid=1.7&rm=3">
+    </div>
 
     <!--basic tags-->
     <h2 style="color:rgb(16, 93, 218)"><U>HTML BASIC TAGS:</U></h2>
@@ -142,19 +146,19 @@ s        form{
         <li>src: Specifies the path to the image.</li>
         <li>alt: Provides an alternate text for the image if it cannot be displayed.</li>
     </ul>
-    <img src="rainbow.jpg" alt="multicolor" width="500" height="600" title="something beauty">
+    <img src="images/htmlimg.jpg" alt="multicolor" width="600" height="400" title="something beauty">
 
     <h3>IMAGE MAP</h3>
     <p>You can create clickable regions within an image using the usemap attribute.</p>
-    <img src="workplace.jpg" alt="Workplace" usemap="#workmap" width="400" height="300">
+    <img src="images/officework.jpg" alt="Workplace" usemap="#workmap" width="600" height="400">
     <map name="workmap">
-    <area shape="rect" coords="34,44,270,350" alt="Computer" href="computer.htm">
-    <area shape="rect" coords="290,172,333,250" alt="Phone" href="phone.htm">
-    <area shape="circle" coords="337,300,44" alt="Cup of coffee" href="coffee.htm">
+    <area shape="rect" coords="34,44,270,350" alt="Computer" href="basic.html">
+    <area shape="rect" coords="290,172,333,250" alt="Phone" href="mysql.txt">
+    <area shape="circle" coords="337,300,44" alt="Cup of coffee" href="css.txt">
     </map>
 
     <h3>IMAGE LINK</h3>
-    <a href="https://youtube.com"><img src="picture.jpg" /></a>
+    <a href="https://youtube.com/education" target="blank"><img src="images/imagemap.png" width=""600" height="400"/></a>
 <hr>
 
     <!--list tags-->
@@ -511,7 +515,7 @@ s        form{
     
     <p>common form elements are input, button, select, textarea, label, fieldset, legend, datalist, output etc.</p>
     </ul>
-    <form action="/action_page.php" method="get/post">
+    <form action="/action_page.php" method="get">
         <input type="image"><br><br>
         <label for="fname">First name:</label>
         <input type="text" id="fname" name="fname" value="John"><br><br>
