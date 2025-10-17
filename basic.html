@@ -68,6 +68,9 @@
             width:40%;
             margin:auto;
         }
+        hr{
+            border:2px solid blue;
+        }
 
 
     </style>
@@ -130,7 +133,48 @@
     <a href="https://www.program.com/" target="_blank">go to  the program</a>
     <br>
     <link rel="stylesheet" type="text/css" href="styles.css" hreflang="en-us">
-<hr>
+    <br>
+
+    <h3>HTML Links - The target Attribute</h3>
+    <p>By default, the linked page will be displayed in the current browser window. To change this, you must specify another target for the link.<br>The target attribute specifies where to open the linked document.<br>The target attribute can have one of the following values:
+
+    <ul>
+        <li>_self - Default. Opens the document in the same window/tab as it was clicked</li>
+        <li>_blank - Opens the document in a new window or tab</li>
+        <li>_parent - Opens the document in the parent frame</li>
+        <li>_top - Opens the document in the full body of the window</li>
+    </ul>
+    <br>
+
+    <h3>Absolute URLs vs. Relative URLs</h3>
+    <p>Both examples above are using an absolute URL (a full web address) in the href attribute. <br>A local link (a link to a page within the same website) is specified with a relative URL (without the "https://www" part):</p>
+    <dl>
+    <dt>Absolute URLs</dt>
+        <dd><a href="https://www.w3.org/">W3C</a></dd>
+        <dd><a href="https://www.google.com/">Google</a></dd>
+
+    <dt>Relative URLs</dt>
+        <dd><a href="html_images.asp">HTML Images</a></dd>
+        <dd><a href="/css/default.asp">CSS Tutorial</a></dd>
+    </dl>
+    <br>
+
+    <h3>Link to an Email Address</h3> 
+        <p>Use mailto: inside the href attribute to create a link that opens the user's email program (to let them send a new email):</p>  
+        <a href="mailto:someone@example.com">Send email</a>
+    <br>
+
+    <h3>Button as a Link</h3>   
+    <p>To use an HTML button as a link, you have to add some JavaScript code.<br>JavaScript allows you to specify what happens at certain events, such as a click of a button:</p> 
+    <button onclick="document.location='default.asp'">HTML Tutorial</button>
+    <br>
+
+    <h3>Link Titles</h3>
+    <p>The title attribute specifies extra information about an element. The information is most often shown as a tooltip text when the mouse moves over the element.</p>    
+    <a href="https://www.w3schools.com/html/" title="Go to W3Schools HTML section">Visit our HTML Tutorial</a>
+    
+    <hr>
+
 
     <h2 style="color:rgb(16, 93, 218)"><U>STYLE ATTRIBUTES:</U></h2>
     <P>The style attribute is used to specify the styling of an HTML element. We have various properties we can specify in an element using the style attribute. Let's discuss them in detail using examples for each property. </P>
@@ -139,7 +183,9 @@
 
     <!--image tags-->
    <h2 style="color:rgb(16, 93, 218)"><U>IMAGE TAGS:</U></h2> 
-    <p>The HTML < img > tag is used to embed images in a web page. Images are not technically inserted into a web page; instead, they are linked to web pages. The < img > tag creates a holding space for the referenced image.</p>
+    <p>The HTML < img > tag is used to embed images in a web page. Images are not technically inserted into a web page; instead, they are linked to web pages. The < img > tag creates a holding space for the referenced image. </p>
+    <p>Images in Another Folder (If you have your images in a sub-folder, you must include the folder name in the src attribute)</p>
+    <p>Images on Another Server/Website (Some web sites point to an image on another server. To point to an image on another server, you must specify an absolute (full) URL in the src attribute)</p>
     <P>The < img > tag is an empty tag, meaning it contains attributes only and does not have a closing tag. The basic syntax is:</P>
     <P>< img src="url" alt= "alternate text" ></P>
     <ul>
@@ -158,6 +204,7 @@
     </map>
 
     <h3>IMAGE LINK</h3>
+    <p>To use an image as a link, just put the < img > tag inside the < a > tag:</p>
     <a href="https://youtube.com/education" target="blank"><img src="images/imagemap.png" width=""600" height="400"/></a>
 <hr>
 
@@ -195,6 +242,7 @@
 
     <h2>style your list</h2>
     <p>We can use the following CSS properties to style our lists. list-style-type,list-style-position, list-style-image, list-style (shorthand property)</p>
+    
     <h3>1.CSS list-style-type Property</h3>
     <p>The list-style-type property specifies the type of item marker in a list. the syntax of the list-style-type property is:</p>
     <p>list-style-type:none|all|list-type</p>
@@ -439,7 +487,7 @@
     </table>
 <hr>
 
-<!--semantic html-->
+<!--semantic and non-semantic html-->
     <h2 style="color:rgb(16, 93, 218)"><U>SEMANTIC HTML:</U></h2>
     <P>HTML tags can be categorized into two types based on semantics in HTML. <br>
         They are:Semantic Tag and Non-semantic Tag<br>Semantic HTML elements clearly define the purpose and meaning of code.</P>
@@ -565,9 +613,97 @@
         <input type="submit" value="CLICK HERE TO SUBMIT">
         <br><br><br><br>
     </form>
+<hr>
 
+<!--HTML Quotation and Citation Elements-->
+<h2 style="color:rgb(16, 93, 218)"><U>HTML Quotation and Citation Elements:</U></h2>
+<p>In this chapter we will go through the < blockquote >,< q >, < abbr >, < address >, < cite >, and < bdo > HTML elements.</p>
+
+<p>1.HTML < blockquote > for Quotations</p>
+<p>The HTML < blockquote > element defines a section that is quoted from another source.Browsers usually indent < blockquote > elements.</p>
+
+<p>Here is a quote from WWF's website:</p>
+<blockquote cite="http://www.worldwildlife.org/who/index.html" style="color: red;">
+For 60 years, WWF has worked to help people and nature thrive. As the world's leading conservation organization, WWF works in nearly 100 countries. At every level, we collaborate with people around the world to develop and deliver innovative solutions that protect communities, wildlife, and the places in which they live.
+</blockquote>
+<br>
+
+<p>2.HTML < q > for Short Quotations</p>
+<p>The HTML < q > tag defines a short quotation. Browsers normally insert quotation marks around the quotation.</p>
+
+<p style="color: red;">WWF's goal is to: <q>Build a future where people live in harmony with nature.</q></p>
+<br>
+
+<p>3.HTML < abbr > for Abbreviations</p>
+<p>The HTML < abbr > tag defines an abbreviation or an acronym, like "HTML", "CSS", "Mr.", "Dr.", "ASAP", "ATM".Marking abbreviations can give useful information to browsers, translation systems and search-engines.<br>
+Tip: Use the global title attribute to show the description for the abbreviation/acronym when you mouse over the element.</p>
+
+<p style="color: red;">The <abbr title="World Health Organization">WHO</abbr> was founded in 1948.</p>
+<br>
+
+<p>4.HTML < address > for Contact Information</p>
+<p>The HTML < address > tag defines the contact information for the author/owner of a document or an article.
+The contact information can be an email address, URL, physical address, phone number, social media handle, etc.
+The text in the < address > element usually renders in italic, and browsers will always add a line break before and after the < address > element.</p>
+
+<address style="color: red;">
+Written by John Doe.<br>
+Visit us at:<br>
+Example.com<br>
+Box 564, Disneyland<br>
+USA
+</address>
+<br>
+
+<p>5.HTML < cite > for Work Title</p>
+<p>The HTML < cite > tag defines the title of a creative work (e.g. a book, a poem, a song, a movie, a painting, a sculpture, etc.).<br>
+Note: A person's name is not the title of a work.<br>
+The text in the < cite > element usually renders in italic.</p>
+
+<p style="color: red;"><cite>The Scream</cite> by Edvard Munch. Painted in 1893.</p>
+<br>
+
+<p>6.HTML < bdo > for Bi-Directional Override</p>
+<p>BDO stands for Bi-Directional Override. The HTML < bdo > tag is used to override the current text direction:</p>
+
+<bdo dir="rtl" style="color: red;">This text will be written from right to left</bdo>
+<hr>
+
+<!--MEDIA ELEMENTS-->
+<h2 style="color:rgb(16, 93, 218)"><U>MEDIA ELEMENTS:</U></h2>
+<p>Multimedia on the web is sound, music, videos, movies, and animations.<br>
+The controls attribute adds audio controls, like play, pause, and volume.<br>
+To start an audio file automatically, use the autoplay attribute.<br>
+Add muted after autoplay to let your audio file start playing automatically (but muted)</p>
+
+<h3>HTML Audio</h3>
+<p>The HTML < audio > element is used to play an audio file on a web page.</p>
+<p>To play an audio file in HTML, use the < audio > element:</p>
+<audio controls autoplay muted>
+  <source src="https://open.spotify.com/track/32qnBgfzURbwNayQIEB5W5?si=0ffe0dbf13414c35" type="audio">
+</audio>
+<br>
+
+<h3>HTML Video</h3>
+<p>The HTML < video > element is used to show a video on a web page.</p>
+<video width="320" height="240" controls autoplay muted>
+  <source src="movie.mp4" type="video/mp4">
+</video>
+<br>
+
+<H3>HTML Iframe Syntax</H3>
+<P>The HTML < iframe > tag specifies an inline frame. An inline frame is used to embed another document within the current HTML document.</P>
+<P>It is a good practice to always include a title attribute for the < iframe >. This is used by screen readers to read out what the content of the iframe is.</P>
+<iframe src="basic.html" height="400" width="600" title="Iframe Example"></iframe><br>
+<p>Add mute=1 after autoplay=1 to let your video start playing automatically (but muted).</p>
+<p>Add playlist=videoID and loop=1 to let your video loop forever.
+loop=0 (default) - The video will play only once.
+loop=1 - The video will loop (forever).</p>
+<iframe width="420" height="315" src="https://www.youtube.com/embed/tgbNymZ7vqY? autoplay=1&mute=1 playlist=tgbNymZ7vqY&loop=1"> 
+</iframe><br>
+<hr>
+<br>
+<br>
 </body>
-
-
 </html>
 
